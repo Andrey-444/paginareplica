@@ -35,7 +35,7 @@
                             style="background-color: #1c4dc9;">Buscar</button></div>
                 </form>
 
-                <div>
+                <div style="margin: 2rem;">
                     <button type="button" class="btn btn-outline-light me-3" style="background-color: #1c4dc9;">Iniciar
                         sesion</button>
                     <button type="button" class="btn" style="color: white;">Registrarse</button>
@@ -48,50 +48,98 @@
         <!--listado debajo del navbar-->
 
         <section style="background-color: rgb(0, 39, 78);">
-            <ul class="container nav nav-pills nav-fill d-flex">
-                <li class=" nav-item">
-                    <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
-                        aria-current="page" href="#">Conciertos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
-                        aria-current="page" href="#">Deportes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
-                        aria-current="page" href="#">Teatro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
-                        aria-current="page" href="#">Culturales</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
-                        aria-current="page" href="#">Comedia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
-                        aria-current="page" href="#">Familiares</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
-                        aria-current="page" href="#">Congresos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
-                        aria-current="page" href="#">Festivales</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"
-                        style="border-radius: 0; background-color: rgb(2, 43, 106); color: aliceblue;">Puntos de
-                        venta</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled"
-                        style="border-radius: 0; background-color: rgb(2, 43, 106); color: aliceblue;"
-                        aria-disabled="true">Ayuda</a>
-                </li>
-            </ul>
+            <div class="container">
+                <ul class="nav nav-pills nav-fill d-flex flex-wrap">
+                    <!-- Elementos de la lista visibles en pantallas grandes -->
+                    <li class="nav-item conciertos d-none d-md-block">
+                        <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                            aria-current="page" href="#">Conciertos</a>
+                    </li>
+                    <li class="nav-item deportes d-none d-md-block">
+                        <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                            aria-current="page" href="#">Deportes</a>
+                    </li>
+                    <li class="nav-item teatro d-none d-md-block">
+                        <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                            aria-current="page" href="#">Teatro</a>
+                    </li>
+                    <li class="nav-item culturales d-none d-md-block">
+                        <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                            aria-current="page" href="#">Culturales</a>
+                    </li>
+                    <li class="nav-item comedia d-none d-md-block">
+                        <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                            aria-current="page" href="#">Comedia</a>
+                    </li>
+                    <li class="nav-item familiares d-none d-md-block">
+                        <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                            aria-current="page" href="#">Familiares</a>
+                    </li>
+                    <li class="nav-item congresos d-none d-md-block">
+                        <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                            aria-current="page" href="#">Congresos</a>
+                    </li>
+                    <li class="nav-item festivales d-none d-md-block">
+                        <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                            aria-current="page" href="#">Festivales</a>
+                    </li>
+                    <!-- Botón colapsable visible solo en pantallas pequeñas -->
+                    <li class="nav-item d-md-none">
+                        <button class="btn btn-secondary w-100 height-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu"
+                            style="border-radius: 0; background-color: #143774; border: none; display: flex; justify-content: center;">
+                            Categorías
+                        </button>
+                    </li>
+
+                    <!-- Elementos colapsables en pantallas pequeñas -->
+                    <div class="collapse d-md-none" id="collapseMenu">
+                        <li class="nav-item conciertos">
+                            <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                                aria-current="page" href="#">Conciertos</a>
+                        </li>
+                        <li class="nav-item deportes">
+                            <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                                aria-current="page" href="#">Deportes</a>
+                        </li>
+                        <li class="nav-item teatro">
+                            <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                                aria-current="page" href="#">Teatro</a>
+                        </li>
+                        <li class="nav-item culturales">
+                            <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                                aria-current="page" href="#">Culturales</a>
+                        </li>
+                        <li class="nav-item comedia">
+                            <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                                aria-current="page" href="#">Comedia</a>
+                        </li>
+                        <li class="nav-item familiares">
+                            <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                                aria-current="page" href="#">Familiares</a>
+                        </li>
+                        <li class="nav-item congresos">
+                            <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                                aria-current="page" href="#">Congresos</a>
+                        </li>
+                        <li class="nav-item festivales">
+                            <a class="nav-link active" style="border-radius: 0; background-color: rgb(0, 39, 78);"
+                                aria-current="page" href="#">Festivales</a>
+                        </li>
+                    </div>
+
+                    <li class="nav-item puntos-venta">
+                        <a class="nav-link" href="#"
+                            style="border-radius: 0; background-color: rgb(2, 43, 106); color: aliceblue;">Puntos de
+                            venta</a>
+                    </li>
+                    <li class="nav-item ayuda">
+                        <a class="nav-link disabled"
+                            style="border-radius: 0; background-color: rgb(2, 43, 106); color: aliceblue;"
+                            aria-disabled="true">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
 
@@ -146,7 +194,7 @@
                         <button type="button" class="btn btn-primary dropdown-toggle"
                             style="border-radius: 0; background-color: rgb(16, 54, 110);" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            TODOS LOS EVENTOS
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -160,7 +208,7 @@
                         <button type="button" class="btn btn-primary dropdown-toggle"
                             style="border-radius: 0; background-color: rgb(16, 54, 110);" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            TODO COLOMBIA
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -179,15 +227,15 @@
 
 
     <!--banner debajo de carousel-->
-    <main style="background-color: rgb(219, 219, 219);">
+    <main class="" style="background-color: rgb(219, 219, 219);">
         <section>
             <div class="container">
                 <div class="malla" style="display: block; position: relative; justify-content: center;">
-                    <img src="assets/baner1.jpg" alt="" style="width: 70%; display: flex;">
+                    <img class="imgcl" src="assets/baner1.jpg" alt="" style="width: 70%; display: flex;">
 
                     <!--aside-->
 
-                    <div class="cartasarti"
+                    <div class="cartasarti  d-none d-md-block"
                         style="display: block; height: fit-content; background-color: rgb(253, 253, 253); border-radius: 1em 0;  width: 25%; justify-content: center; text-align: center; overflow: hidden;">
                         <div class="info"
                             style="border-radius: 1em 0; background-color: aliceblue; border-style:solid; border-color: rgb(145, 202, 255); align-items: center; margin-bottom: 1rem;">
@@ -198,7 +246,9 @@
                         </div>
                         <h6>Espectaculos</h6>
                         <hr style="display: flex; justify-content: center; margin: 0 2rem 1rem; ">
-                        <h5 style="margin: 1rem;">FERXXO</h5>
+                        <h5 class="card"
+                            style="margin: 1rem; display: block; justify-content: center; text-align: center;">FERXXO
+                        </h5>
                         <div class="card">
                             <img src="assets/BAN1.jpg" class="card-img-top" alt="...">
                             <div class="card-body" style="padding: 0; ">
@@ -209,7 +259,9 @@
                             </div>
                         </div>
 
-                        <h5 style="margin: 1rem;">MILO J</h5>
+                        <h5 class="card"
+                            style="margin: 1rem; display: block; justify-content: center; text-align: center;">MILO J
+                        </h5>
                         <div class="card">
                             <img src="assets/BAN2.jpg" class="card-img-top" alt="...">
                             <div class="card-body" style="padding: 0; ">
@@ -220,7 +272,7 @@
                             </div>
                         </div>
 
-                        <h5 style="margin: 1rem;">MIGUEL ANGEL VIVO</h5>
+                        <h5 class="card" style="margin: 1rem;">MIGUEL ANGEL VIVO</h5>
                         <div class="card">
                             <img src="assets/BAN3.jpg" class="card-img-top" alt="...">
                             <div class="card-body" style="padding: 0; ">
@@ -230,7 +282,9 @@
                                 </button>
                             </div>
                         </div>
-                        <h5 style="margin: 1rem;">MIGUEL ANGEL VIVO</h5>
+                        <H6 class="card"
+                            style="margin: 1rem; display: block; justify-content: center; text-align: center;">
+                            BARRANQUILLA BRILLA CON ELITE</H6>
                         <div class="card">
                             <img src="assets/BAN5.jpg" class="card-img-top" alt="...">
                             <div class="card-body" style="padding: 0; ">
@@ -246,7 +300,7 @@
 
         <section class="album py-2" style="display: flex; text-align: center; justify-content: center;">
             <div class="container">
-                <div
+                <div class="spam2"
                     style="width: 70%; display: flex; background-color: #143774; align-items: center; text-align: center; justify-content: center;">
                     <p style="color: rgb(255, 255, 255); margin: 0; font-weight: 200; padding: 1em 0;">EVENTOS EN TU
                         CIUDAD
@@ -256,282 +310,297 @@
         </section>
 
         <!--cartas-->
-
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3"
-                style="width: 70%; margin: 0; padding: 0rem 1rem 2rem 1rem; background-color: #ffffff;">
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/carta1.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">MENTE CONSCIENTE.</P>
-                            <div class="d-flex justify-content-between align-items-center">
+        <div class="cards1">
+            <div class="container">
+                <div class="ubu row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3"
+                    style="width: 70%; margin: 0; padding: 0rem 1rem 2rem 1rem; background-color: #ffffff;">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/carta1.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img2.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">PARAMO CELEBRA</P>
-                            <div class="d-flex justify-content-between align-items-center">
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">MENTE
+                                    CONSCIENTE.</P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img3.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">ANDREA BOCELLI</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img2.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">PARAMO
+                                    CELEBRA</P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img4.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">ANDRES CEPEDA</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img3.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">ANDREA
+                                    BOCELLI</P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img5.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">APOLO 7</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img4.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">ANDRES
+                                    CEPEDA</P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img6.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">AVENTURA</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img5.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">APOLO 7
+                                </P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img7.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">BRILLA CON ELITE</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img6.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">
+                                    AVENTURA
+                                </P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img8.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">BRESH</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img7.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">BRILLA
+                                    CON
+                                    ELITE</P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img9.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">DRUNK COMEDY</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img8.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">BRESH
+                                </P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img10.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">DUO MARGER</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img9.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">DRUNK
+                                    COMEDY</P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img11.jpg" alt="123">
-                        </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">FERXXO</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img10.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">DUO
+                                    MARGER
+                                </P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div>
-                            <img class="bd-placeholder-img card-img-top" src="assets/img12.jpg" alt="123">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img11.jpg" alt="123">
+                            </div>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">FERXXO
+                                </P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body"
-                            style="display: block; text-align: center; align-items: center; padding: 0;">
-                            <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">ESTEREO PICNIC 2025</P>
-                            <div class="d-flex justify-content-between align-items-center">
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div>
+                                <img class="bd-placeholder-img card-img-top" src="assets/img12.jpg" alt="123">
                             </div>
-                            <div style="display: flex; text-align: center;">
-                                <a href=""
-                                    style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
-                            </div>
-                            <div style="display: flex; text-align: center;">
-                                <a type="button" class="btn btn-primary href="
-                                    style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
-                                    eventos</a>
+                            <div class="card-body"
+                                style="display: block; text-align: center; align-items: center; padding: 0;">
+                                <P class="card-text" style="margin:1rem 1rem; font-weight: 700; font-size:11px;">ESTEREO
+                                    PICNIC 2025</P>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a href=""
+                                        style="border: #c1c1c1; border-style:dotted; width: 100%; text-decoration: none; color: #000; font-weight: 100;">BOGOTÁ</a>
+                                </div>
+                                <div style="display: flex; text-align: center;">
+                                    <a type="button" class="btn btn-primary href="
+                                        style=" width: 100%; text-decoration: none; color: #ffffff; border-radius: 0%; font-weight: 500;">Ver
+                                        eventos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -578,16 +647,16 @@
                 <div class="col-md-5 offset-md-1 mb-3" style="">
                     <img src="assets/ungif.gif" alt="">
                     <div style="display: flex; margin-top: 1rem;">
-                        
+
                         <img src="assets/twitter.png" style="width: 20px; height: 20px;" alt="">
                         <p style="margin-right: 1rem;">twitter</p>
-                        
-                        <img src="assets/facebook.png"style="width: 20px; height: 20px;"  alt="">
-                        <p  style="margin-right: 1rem;">facebook</p>
-                        
+
+                        <img src="assets/facebook.png" style="width: 20px; height: 20px;" alt="">
+                        <p style="margin-right: 1rem;">facebook</p>
+
                         <img src="assets/instagram.png" style="width: 20px; height: 20px;" alt="">
-                        <p  style="margin-right: 1rem;">insta</p>
-                        
+                        <p style="margin-right: 1rem;">insta</p>
+
                     </div>
                     <p>La vida esta llena de experiencias... <br>
                         #experienciaeticket</p>

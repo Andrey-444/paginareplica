@@ -1,54 +1,67 @@
+body {}
 
-body{
+header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 20px 3px;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    padding: 20px 3px;
+.form-control_form-control-dark_text-bg-dark {
+  background-color: rgb(14, 255, 255);
 }
 
-.form-control_form-control-dark_text-bg-dark{
-    background-color: rgb(14, 255, 255);
+.form {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
 }
 
-.form{
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-}
-
-.form-control_form-control-dark_text-bg-dark{
-    padding-right: 50px;
+.form-control_form-control-dark_text-bg-dark {
+  padding-right: 50px;
 }
 
 
 /*collapse*/
-  /* Estilo para la clase .contain */
-  .contain {
-    display: flex; /* Cambiamos a un contenedor flexible */
-    justify-content: center; /* Distribución equitativa entre los elementos */
-    background-color:rgb(16, 54, 110);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    align-content: center;
-    align-items: center;
+/* Estilo para la clase .contain */
+.contain {
+  display: flex;
+  /* Cambiamos a un contenedor flexible */
+  justify-content: center;
+  /* Distribución equitativa entre los elementos */
+  background-color: rgb(16, 54, 110);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-content: center;
+  align-items: center;
 }
-  
-  /* Estilo para las cajas (caja1 y caja2) */
 
-  /*articulo*/
+/* Estilo para las cajas (caja1 y caja2) */
 
-  .cartasarti{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
+/*articulo*/
 
-  /*para el aside*/
+.cartasarti {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
 
- 
 
+/* Estilos generales para la lista */
+.nav-item {
+  flex: 1 1 auto;
+}
+
+/* Ocultar elementos en diferentes tamaños de pantalla */
+.imgcl {
+  width: auto;
+  /* Regla original */
+}
+
+@media (max-width: 768px) { .imgcl { width: 100% !important; } }
+
+@media (max-width: 768px) { .spam2 { width: 100% !important; } }
+
+@media (max-width: 768px) { .ubu { width: 100% !important; } }
